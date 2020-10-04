@@ -1,1 +1,1 @@
-# CodeforesRatingBot
+# CodeforcesRating Bot
