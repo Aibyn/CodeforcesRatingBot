@@ -23,10 +23,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac550242-d465-4dc7-8e6b-acf56ceca4dc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/Types/Chat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/Types/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/Types/Update.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/CodeforcesRatingBotApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/CodeforcesRatingBotApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +55,13 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -61,9 +73,30 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager">
+    <configuration name="CodeforcesRatingBotApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.telegrambot.codeforcesRatingbot.CodeforcesRatingBotApplication" />
+      <module name="CodeforcesRatingBot.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.telegrambot.codeforcesRatingbot.Types.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CodeforcesRatingBotApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -88,9 +121,37 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="533" y="150" key="#com.intellij.ide.util.MemberChooser" timestamp="1614678755200">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="533" y="150" key="#com.intellij.ide.util.MemberChooser/0.25.1440.875@0.25.1440.875" timestamp="1614678755200" />
+    <state x="449" y="210" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1614669382223">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="449" y="210" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.25.1440.875@0.25.1440.875" timestamp="1614669382223" />
+    <state width="1398" height="228" key="GridCell.Tab.0.bottom" timestamp="1614679961155">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="228" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1614679961155" />
+    <state width="1398" height="228" key="GridCell.Tab.0.center" timestamp="1614679961154">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="228" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1614679961154" />
+    <state width="1398" height="228" key="GridCell.Tab.0.left" timestamp="1614679961154">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="228" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1614679961154" />
+    <state width="1398" height="228" key="GridCell.Tab.0.right" timestamp="1614679961155">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="228" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1614679961155" />
     <state x="208" y="41" key="SettingsEditor" timestamp="1614669363465">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="208" y="41" key="SettingsEditor/0.25.1440.875@0.25.1440.875" timestamp="1614669363465" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1614678589122">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/0.25.1440.875@0.25.1440.875" timestamp="1614678589122" />
   </component>
 </project>
