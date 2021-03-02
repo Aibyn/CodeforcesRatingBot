@@ -21,20 +21,4 @@ public class CodeforcesRatingBotApplication {
 		SpringApplication.run(CodeforcesRatingBotApplication.class, args);
 	}
 
-	@Bean
-	public RestTemplate restTemplate(RestTemplateBuilder builder) {
-		return builder.build();
-	}
-
-	@Bean
-	public CommandLineRunner run(RestTemplate restTemplate) throws Exception {
-		return args -> {
-			String update = restTemplate.getForObject("https://api.telegram.org/bot1100803566:AAF-rM7svo1PfH8QNuZu6PRt14zMEmo4rNg/getUpdates", String.class);
-			logger.info("This is my Object -> {}", update.toString());
-			Map<String, String> obj = new HashMap<>();
-			obj.put("chat_id", "322938800");
-			obj.put("text", "Hello");
-			restTemplate.postForObject("https://api.telegram.org/bot1100803566:AAF-rM7svo1PfH8QNuZu6PRt14zMEmo4rNg/sendMessage", obj, Map.class);
-		};
-	}
 }
