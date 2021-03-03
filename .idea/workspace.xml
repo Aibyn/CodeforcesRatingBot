@@ -23,15 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac550242-d465-4dc7-8e6b-acf56ceca4dc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/Bot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/Handler/MessageHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/Reply/EchoReply.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/Reply/HelpReply.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/Reply/Reply.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/Sender/CommonMessages.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/messages_en_EN.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/CodeforcesRatingBotApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/CodeforcesRatingBotApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/Types/Chat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/Types/Message.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/Types/Update.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/Bot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,6 +80,13 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.telegrambot.codeforcesRatingbot.Handler" />
+      <recent name="com.telegrambot.codeforcesRatingbot.Reply" />
+      <recent name="com.telegrambot.codeforcesRatingbot" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="CodeforcesRatingBotApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.telegrambot.codeforcesRatingbot.CodeforcesRatingBotApplication" />
@@ -123,37 +131,45 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="533" y="150" key="#com.intellij.ide.util.MemberChooser" timestamp="1614694623470">
+    <state x="408" y="268" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1614767114928">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="533" y="150" key="#com.intellij.ide.util.MemberChooser/0.25.1440.875@0.25.1440.875" timestamp="1614694623470" />
-    <state x="449" y="210" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1614669382223">
+    <state x="408" y="268" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1440.875@0.25.1440.875" timestamp="1614767114928" />
+    <state x="533" y="150" key="#com.intellij.ide.util.MemberChooser" timestamp="1614774321226">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="449" y="210" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.25.1440.875@0.25.1440.875" timestamp="1614669382223" />
-    <state width="1398" height="228" key="GridCell.Tab.0.bottom" timestamp="1614695554762">
+    <state x="533" y="150" key="#com.intellij.ide.util.MemberChooser/0.25.1440.875@0.25.1440.875" timestamp="1614774321226" />
+    <state x="449" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1614774379870">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="228" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1614695554762" />
-    <state width="1398" height="228" key="GridCell.Tab.0.center" timestamp="1614695554762">
+    <state x="449" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.25.1440.875@0.25.1440.875" timestamp="1614774379870" />
+    <state x="100" y="125" width="1240" height="675" key="DiffContextDialog" timestamp="1614773581748">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="228" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1614695554762" />
-    <state width="1398" height="228" key="GridCell.Tab.0.left" timestamp="1614695554761">
+    <state x="100" y="125" width="1240" height="675" key="DiffContextDialog/0.25.1440.875@0.25.1440.875" timestamp="1614773581748" />
+    <state width="1398" height="218" key="GridCell.Tab.0.bottom" timestamp="1614774416801">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="228" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1614695554761" />
-    <state width="1398" height="228" key="GridCell.Tab.0.right" timestamp="1614695554762">
+    <state width="1398" height="218" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1614774416801" />
+    <state width="1398" height="218" key="GridCell.Tab.0.center" timestamp="1614774416801">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="228" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1614695554762" />
+    <state width="1398" height="218" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1614774416801" />
+    <state width="1398" height="218" key="GridCell.Tab.0.left" timestamp="1614774416800">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="218" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1614774416800" />
+    <state width="1398" height="218" key="GridCell.Tab.0.right" timestamp="1614774416801">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="218" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1614774416801" />
     <state x="208" y="41" key="SettingsEditor" timestamp="1614669363465">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="208" y="41" key="SettingsEditor/0.25.1440.875@0.25.1440.875" timestamp="1614669363465" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1614678589122">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1614771053137">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/0.25.1440.875@0.25.1440.875" timestamp="1614678589122" />
+    <state width="500" height="445" key="SwitcherDM/0.25.1440.875@0.25.1440.875" timestamp="1614771053137" />
   </component>
 </project>
