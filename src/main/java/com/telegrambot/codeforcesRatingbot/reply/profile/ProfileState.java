@@ -1,4 +1,4 @@
-package com.telegrambot.codeforcesRatingbot.Reply.profile;
+package com.telegrambot.codeforcesRatingbot.reply.profile;
 
 public enum  ProfileState {
     SUBSCRIBE, UNSUBSCRIBE;

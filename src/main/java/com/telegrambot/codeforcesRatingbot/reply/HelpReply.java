@@ -1,7 +1,6 @@
-package com.telegrambot.codeforcesRatingbot.Reply;
+package com.telegrambot.codeforcesRatingbot.reply;
 
-import com.telegrambot.codeforcesRatingbot.bot.Bot;
-import com.telegrambot.codeforcesRatingbot.Sender.CommonMessages;
+import com.telegrambot.codeforcesRatingbot.sender.CommonMessages;
 import com.telegrambot.codeforcesRatingbot.bot.BotState;
 import com.telegrambot.codeforcesRatingbot.cache.UserCache;
 import com.telegrambot.codeforcesRatingbot.service.CommandGetterService;
@@ -9,16 +8,11 @@ import lombok.NoArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
-import org.telegram.telegrambots.meta.api.methods.commands.GetMyCommands;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.commands.BotCommand;
-import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
