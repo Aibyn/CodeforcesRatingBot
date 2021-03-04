@@ -1,8 +1,11 @@
 package com.telegrambot.codeforcesRatingbot.Reply;
 
+import com.telegrambot.codeforcesRatingbot.bot.BotState;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
 
 public interface Reply {
-    public SendMessage sendMessage(Message message);
+    SendMessage sendMessage(Message message);
+
+    BotState getReplyName();
 }
