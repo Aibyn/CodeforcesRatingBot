@@ -1,4 +1,4 @@
-package com.telegrambot.codeforcesRatingbot.Reply;
+package com.telegrambot.codeforcesRatingbot.reply;
 
 import com.telegrambot.codeforcesRatingbot.bot.BotState;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;

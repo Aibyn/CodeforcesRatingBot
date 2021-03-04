@@ -1,15 +1,11 @@
 package com.telegrambot.codeforcesRatingbot.service;
 
-import com.telegrambot.codeforcesRatingbot.Sender.CommonMessages;
 import com.telegrambot.codeforcesRatingbot.bot.Bot;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.commands.GetMyCommands;
-import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.commands.BotCommand;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
 package com.telegrambot.codeforcesRatingbot.bot;
 
-import com.telegrambot.codeforcesRatingbot.Handler.UpdateHandler;
+import com.telegrambot.codeforcesRatingbot.handler.UpdateHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
