@@ -1,12 +1,11 @@
-package com.telegrambot.codeforcesRatingbot;
+package com.telegrambot.codeforcesRatingbot.bot;
 
-import com.telegrambot.codeforcesRatingbot.Handler.MessageHandler;
+import com.telegrambot.codeforcesRatingbot.Handler.UpdateHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
@@ -17,7 +16,7 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 public class Bot extends TelegramLongPollingBot {
 
     @Autowired
-    MessageHandler messageHandler;
+    UpdateHandler updateHandler;
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -45,7 +44,7 @@ public class Bot extends TelegramLongPollingBot {
             return;
         }
         Message message = update.getMessage();
-        SendMessage sendMessage = messageHandler.handle(message);
+        SendMessage sendMessage = updateHandler.handle(message);
         ExecuteSendMessage(sendMessage);
     }
 

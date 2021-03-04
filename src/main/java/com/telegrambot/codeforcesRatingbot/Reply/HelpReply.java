@@ -1,7 +1,10 @@
 package com.telegrambot.codeforcesRatingbot.Reply;
 
-import com.telegrambot.codeforcesRatingbot.Bot;
+import com.telegrambot.codeforcesRatingbot.bot.Bot;
 import com.telegrambot.codeforcesRatingbot.Sender.CommonMessages;
+import com.telegrambot.codeforcesRatingbot.bot.BotState;
+import com.telegrambot.codeforcesRatingbot.cache.UserCache;
+import com.telegrambot.codeforcesRatingbot.service.CommandGetterService;
 import lombok.NoArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,6 +19,7 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @NoArgsConstructor
@@ -23,31 +27,31 @@ public class HelpReply implements Reply {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    public HelpReply(@Lazy Bot telegramBot) {
-        this.telegramBot = telegramBot;
-    }
-
     @Autowired
-    Bot telegramBot;
-
+    CommandGetterService commandGetterService;
+    @Autowired
+    CommonMessages commonMessages;
+    @Autowired
+    UserCache userCache;
 
     @Override
     public SendMessage sendMessage(Message message) {
-        SendMessage replyToMessage = null;
-        try {
-            ArrayList<BotCommand> botCommands = telegramBot.execute(new GetMyCommands());
-            StringBuilder commands = new StringBuilder();
-            commands.append("Here is the list commands you can use\n");
-            botCommands.forEach(botCommand -> {
-                commands.append("/" + botCommand.getCommand() + " - " + botCommand.getDescription() + '\n');
-            });
-            commands.deleteCharAt(commands.length() - 1);
-            replyToMessage = CommonMessages.sendMessage(message.getChatId(), commands.toString());
-        } catch (TelegramApiRequestException e) {
-            e.printStackTrace();
-        } catch (TelegramApiException e) {
-            e.printStackTrace();
+        userCache.setUserBotState(message.getFrom().getId(), BotState.NULL_STATE);
+        List<BotCommand> botCommands = commandGetterService.getCommands();
+        if (botCommands == null) {
+            return commonMessages.sendWarningMessage(message.getChatId(), "Couldn't load commands. Please try again next time");
         }
-        return replyToMessage;
+        StringBuilder commands = new StringBuilder();
+        commands.append("Here is the list commands you can use\n");
+        botCommands.forEach(botCommand -> {
+            commands.append("/" + botCommand.getCommand() + " - " + botCommand.getDescription() + '\n');
+        });
+        commands.deleteCharAt(commands.length() - 1);
+        return commonMessages.sendMessage(message.getChatId(), commands.toString());
+    }
+
+    @Override
+    public BotState getReplyName() {
+        return BotState.SHOW_HELP_MENU;
     }
 }
