@@ -1,7 +1,7 @@
-package com.telegrambot.codeforcesRatingbot.Reply.profile;
+package com.telegrambot.codeforcesRatingbot.reply.profile;
 
-import com.telegrambot.codeforcesRatingbot.Reply.Reply;
-import com.telegrambot.codeforcesRatingbot.Sender.CommonMessages;
+import com.telegrambot.codeforcesRatingbot.reply.Reply;
+import com.telegrambot.codeforcesRatingbot.sender.CommonMessages;
 import com.telegrambot.codeforcesRatingbot.bot.BotState;
 import com.telegrambot.codeforcesRatingbot.cache.UserCache;
 import lombok.NoArgsConstructor;

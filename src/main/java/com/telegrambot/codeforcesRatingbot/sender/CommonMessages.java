@@ -1,4 +1,4 @@
-package com.telegrambot.codeforcesRatingbot.Sender;
+package com.telegrambot.codeforcesRatingbot.sender;
 
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;

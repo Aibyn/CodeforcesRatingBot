@@ -1,9 +1,7 @@
-package com.telegrambot.codeforcesRatingbot.Handler;
+package com.telegrambot.codeforcesRatingbot.handler;
 
-import com.telegrambot.codeforcesRatingbot.Sender.CommonMessages;
-import com.telegrambot.codeforcesRatingbot.bot.Bot;
-import com.telegrambot.codeforcesRatingbot.Reply.EchoReply;
-import com.telegrambot.codeforcesRatingbot.Reply.Reply;
+import com.telegrambot.codeforcesRatingbot.reply.EchoReply;
+import com.telegrambot.codeforcesRatingbot.reply.Reply;
 import com.telegrambot.codeforcesRatingbot.bot.BotState;
 import com.telegrambot.codeforcesRatingbot.cache.UserCache;
 import org.slf4j.Logger;
@@ -45,7 +43,7 @@ public class UpdateHandler {
             case "/delete_profile":
                 botState = BotState.UNSUBSCRIPTION_START;
                 break;
-            case "/show_list":
+            case "/list_profile":
                 botState = BotState.SHOW_SUBSCRIPTION_LIST;
                 break;
             default:
@@ -53,7 +51,6 @@ public class UpdateHandler {
         }
         userCache.setUserBotState(user.getId(), botState);
         Reply reply = handleReplyToBotState(botState);
-        logger.info("Array BotState to Reply -> {}", replyToBotState.toString());
         logger.info("This is my reply and BotState -> {} and {}", reply, botState);
         return reply.sendMessage(message);
     }
