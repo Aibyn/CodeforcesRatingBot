@@ -1,6 +1,6 @@
-package com.telegrambot.codeforcesRatingbot.Reply;
+package com.telegrambot.codeforcesRatingbot.reply;
 
-import com.telegrambot.codeforcesRatingbot.Sender.CommonMessages;
+import com.telegrambot.codeforcesRatingbot.sender.CommonMessages;
 import com.telegrambot.codeforcesRatingbot.bot.BotState;
 import com.telegrambot.codeforcesRatingbot.cache.UserCache;
 import org.springframework.beans.factory.annotation.Autowired;
