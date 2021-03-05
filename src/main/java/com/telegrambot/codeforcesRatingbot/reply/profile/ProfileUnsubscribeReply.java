@@ -19,7 +19,7 @@ import java.util.Optional;
 @Service
 public class ProfileUnsubscribeReply implements Reply {
 
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     UserRatingService subscriptionService;
@@ -33,11 +33,11 @@ public class ProfileUnsubscribeReply implements Reply {
         String profile = message.getText();
         long chatId = message.getChatId();
         int userId = message.getFrom().getId();
-        // TODO(aibyn) Add Validtor for name
+        // TODO(aibyn) Add Validator for name
         List<UserRatingSubscription> profileList = subscriptionService.findByChatId(chatId);
         Optional<UserRatingSubscription> toDeleteOptional = profileList.stream().filter(arr -> profile.equals(arr.getProfile())).findFirst();
         userCache.setUserBotState(userId, BotState.NULL_STATE);
-        if (!toDeleteOptional.isPresent()) {
+        if (toDeleteOptional.isEmpty()) {
             return messageService.sendMessage(chatId, "There is no such profile in your list");
         }
         UserRatingSubscription toDelete = toDeleteOptional.get();
