@@ -22,26 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac550242-d465-4dc7-8e6b-acf56ceca4dc" name="Default Changelist" comment="Made changes to Reply">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/model/UserRatingSubscription.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/reply/profile/ProfileList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/reply/profile/ProfileSubscribeReply.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/reply/profile/ProfileUnsubscribeReply.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/repository/UserSpringDataRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/service/UserRatingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Commands.txt" afterDir="false" />
+    <list default="true" id="ac550242-d465-4dc7-8e6b-acf56ceca4dc" name="Default Changelist" comment="Added working repository">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/service/InfoRetrievingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/Handler/UpdateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/handler/UpdateHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/Reply/EchoReply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/reply/EchoReply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/Reply/HelpReply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/reply/HelpReply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/Reply/MenuReply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/reply/MenuReply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/Reply/Reply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/reply/Reply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/Reply/profile/ProfileReply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/reply/profile/ProfileReply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/Reply/profile/ProfileState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/reply/profile/ProfileState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/Sender/CommonMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/sender/CommonMessages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/bot/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/bot/Bot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/service/CommandGetterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/service/CommandGetterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/CodeforcesRatingBotApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/CodeforcesRatingBotApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/reply/profile/ProfileUnsubscribeReply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/reply/profile/ProfileUnsubscribeReply.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -182,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614851038620</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added working repository">
+      <created>1614857089106</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1614857089106</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -203,17 +195,18 @@
     <MESSAGE value="Added default reply for unnoticed actions" />
     <MESSAGE value="Made changes to Reply" />
     <MESSAGE value="Added reply to commands." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added reply to commands." />
+    <MESSAGE value="Added working repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added working repository" />
   </component>
   <component name="WindowStateProjectService">
     <state x="408" y="268" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1614767114928">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="408" y="268" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1440.875@0.25.1440.875" timestamp="1614767114928" />
-    <state x="533" y="150" key="#com.intellij.ide.util.MemberChooser" timestamp="1614855465869">
+    <state x="533" y="150" key="#com.intellij.ide.util.MemberChooser" timestamp="1614953524250">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="533" y="150" key="#com.intellij.ide.util.MemberChooser/0.25.1440.875@0.25.1440.875" timestamp="1614855465869" />
+    <state x="533" y="150" key="#com.intellij.ide.util.MemberChooser/0.25.1440.875@0.25.1440.875" timestamp="1614953524250" />
     <state x="445" y="155" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1614851208086">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
@@ -230,22 +223,22 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="100" y="125" width="1240" height="675" key="DiffContextDialog/0.25.1440.875@0.25.1440.875" timestamp="1614773581748" />
-    <state width="1398" height="218" key="GridCell.Tab.0.bottom" timestamp="1614856952961">
+    <state width="1398" height="218" key="GridCell.Tab.0.bottom" timestamp="1614953610973">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="218" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1614856952961" />
-    <state width="1398" height="218" key="GridCell.Tab.0.center" timestamp="1614856952960">
+    <state width="1398" height="218" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1614953610973" />
+    <state width="1398" height="218" key="GridCell.Tab.0.center" timestamp="1614953610972">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="218" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1614856952960" />
-    <state width="1398" height="218" key="GridCell.Tab.0.left" timestamp="1614856952959">
+    <state width="1398" height="218" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1614953610972" />
+    <state width="1398" height="218" key="GridCell.Tab.0.left" timestamp="1614953610972">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="218" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1614856952959" />
-    <state width="1398" height="218" key="GridCell.Tab.0.right" timestamp="1614856952960">
+    <state width="1398" height="218" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1614953610972" />
+    <state width="1398" height="218" key="GridCell.Tab.0.right" timestamp="1614953610973">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="218" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1614856952960" />
+    <state width="1398" height="218" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1614953610973" />
     <state x="208" y="41" key="SettingsEditor" timestamp="1614669363465">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
