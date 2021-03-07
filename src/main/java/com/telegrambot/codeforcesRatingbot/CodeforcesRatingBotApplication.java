@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @SpringBootApplication
-public class CodeforcesRatingBotApplication implements CommandLineRunner {
+public class CodeforcesRatingBotApplication {
 
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -30,9 +30,4 @@ public class CodeforcesRatingBotApplication implements CommandLineRunner {
 		return builder.build();
 	}
 
-	@Override
-	public void run(String... args) throws Exception {
-		logger.info("Here start get codeforces");
-		infoService.retrieveJson("Shadow");
-	}
 }

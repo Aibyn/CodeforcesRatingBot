@@ -33,6 +33,7 @@ public class UpdateHandler {
         User user = message.getFrom();
         String text = message.getText();
         BotState botState = null;
+        //TODD(aibyn) Add /cancel method
         switch (text) {
             case "/help":
                 botState = BotState.SHOW_HELP_MENU;
