@@ -33,13 +33,14 @@ public class ProfileUnsubscribeReply implements Reply {
         String profile = message.getText();
         long chatId = message.getChatId();
         int userId = message.getFrom().getId();
-        // TODO(aibyn) Add Validator for name
+
         List<UserRatingSubscription> profileList = subscriptionService.findByChatId(chatId);
         Optional<UserRatingSubscription> toDeleteOptional = profileList.stream().filter(arr -> profile.equals(arr.getProfile())).findFirst();
-        userCache.setUserBotState(userId, BotState.NULL_STATE);
         if (toDeleteOptional.isEmpty()) {
-            return messageService.sendMessage(chatId, "There is no such profile in your list");
+            return messageService.sendMessage(chatId, "There is no such profile in your list. Please try again");
         }
+
+        userCache.setUserBotState(userId, BotState.NULL_STATE);
         UserRatingSubscription toDelete = toDeleteOptional.get();
         subscriptionService.deleteUserSubscription(toDelete);
         logger.info("User id = {} unsubscribed from -> {}", chatId, profile);
