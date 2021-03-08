@@ -35,23 +35,33 @@ public class InfoRetrievingService {
     @Autowired
     private ObjectMapper objectMapper;
 
-    public void retrieveJson(String username) {
+    public RatingChange retrieveRatingChangeByUsername(String username) {
         String url = codeforcesApiUrl + codeforcesGetUserRating + "?handle=" + username;
-        try {
-            String jsonString = restTemplate.getForObject(url, String.class);
+        boolean again = true;
+        RatingChange ratingChange = null;
+        while (again) {
             try {
-                JsonNode jsonNode = objectMapper.readTree(jsonString).findPath("result");
-                RatingChange[] ratingChanges = objectMapper.readValue(jsonNode.toString(), RatingChange[].class);
-                if (ratingChanges.length > 0) {
-                    logger.info("Here is the first rating change of profile -> {}", ratingChanges[ratingChanges.length - 1].toString());
+                String jsonString = restTemplate.getForObject(url, String.class);
+                try {
+                    JsonNode jsonNode = objectMapper.readTree(jsonString).findPath("result");
+                    RatingChange[] ratingChanges = objectMapper.readValue(jsonNode.toString(), RatingChange[].class);
+                    if (ratingChanges.length > 0) {
+                        ratingChange = ratingChanges[ratingChanges.length - 1];
+                    }
+                    again = false;
+                } catch (JsonProcessingException e) {
+                    again = false;
+                    e.printStackTrace();
+                    throw new RuntimeException("Couldn't parse the Json");
                 }
-            } catch (JsonProcessingException e) {
-                e.printStackTrace();
+            } catch (HttpClientErrorException.TooManyRequests e) {
+                logger.warn("Too many requests to Codeforces API");
+            } catch (HttpClientErrorException e) {
+                logger.warn("Http 400 exceptions -> {} for this username -> {}", e.getLocalizedMessage(), username);
+                again = false;
+                throw new RuntimeException("Couldn't access the http 400 error");
             }
-        } catch (HttpClientErrorException.TooManyRequests e) {
-            logger.warn("Too many requests to Codeforces API");
-        } catch (HttpClientErrorException e) {
-            logger.warn("Http 400 exceptions -> {}", e.getLocalizedMessage());
         }
+        return ratingChange;
     }
 }
