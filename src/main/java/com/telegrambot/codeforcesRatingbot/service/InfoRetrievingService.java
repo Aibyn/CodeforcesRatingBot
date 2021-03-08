@@ -58,13 +58,16 @@ public class InfoRetrievingService {
                 }
             } catch (HttpClientErrorException.TooManyRequests e) {
                 logger.warn("Too many requests to Codeforces API");
+            } catch (HttpClientErrorException.BadRequest e) {
+                logger.info("Non existent username={}", username);
+                throw e;
             } catch (HttpClientErrorException e) {
                 logger.warn("Http 400 exceptions -> {} for this username -> {}", e.getLocalizedMessage(), username);
                 again = false;
-                throw new RuntimeException("Couldn't access the http 400 error");
+                throw new RuntimeException("Couldn't access. Http 400 type error" );
             }
         }
-        if (!again) {
+        if (again) {
             throw new RuntimeException("Couldn't get username too many requests");
         }
         return ratingChange;

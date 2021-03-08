@@ -20,10 +20,13 @@ public class UserRatingSubscription {
 
     private long chatId;
 
+    private long lastContest;
+
     private String profile;
 
-    public UserRatingSubscription(long chatId, String profile) {
+    public UserRatingSubscription(long chatId, long lastContest, String profile) {
         this.chatId = chatId;
+        this.lastContest = lastContest;
         this.profile = profile;
     }
 }
