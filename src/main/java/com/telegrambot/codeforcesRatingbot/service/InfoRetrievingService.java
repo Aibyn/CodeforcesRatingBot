@@ -39,7 +39,9 @@ public class InfoRetrievingService {
         String url = codeforcesApiUrl + codeforcesGetUserRating + "?handle=" + username;
         boolean again = true;
         RatingChange ratingChange = null;
-        while (again) {
+        int tryCount = 5;
+        while (again && tryCount > 0) {
+            tryCount--;
             try {
                 String jsonString = restTemplate.getForObject(url, String.class);
                 try {
@@ -61,6 +63,9 @@ public class InfoRetrievingService {
                 again = false;
                 throw new RuntimeException("Couldn't access the http 400 error");
             }
+        }
+        if (!again) {
+            throw new RuntimeException("Couldn't get username too many requests");
         }
         return ratingChange;
     }

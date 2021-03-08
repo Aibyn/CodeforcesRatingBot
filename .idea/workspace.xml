@@ -22,7 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac550242-d465-4dc7-8e6b-acf56ceca4dc" name="Default Changelist" comment="Updated retrive rating change method.">
+    <list default="true" id="ac550242-d465-4dc7-8e6b-acf56ceca4dc" name="Default Changelist" comment="Added errors for the rating change function.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/CodeforcesRatingBotApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/CodeforcesRatingBotApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/service/InfoRetrievingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/service/InfoRetrievingService.java" afterDir="false" />
@@ -187,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615126858100</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added errors for the rating change function.">
+      <created>1615200248074</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1615200248074</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -211,7 +218,8 @@
     <MESSAGE value="Added working repository" />
     <MESSAGE value="Added InfoService to retrieve user rating from api." />
     <MESSAGE value="Updated retrive rating change method." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated retrive rating change method." />
+    <MESSAGE value="Added errors for the rating change function." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added errors for the rating change function." />
   </component>
   <component name="WindowStateProjectService">
     <state x="408" y="268" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1614767114928">
