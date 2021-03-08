@@ -2,14 +2,17 @@ package com.telegrambot.codeforcesRatingbot.reply.profile;
 
 import com.telegrambot.codeforcesRatingbot.bot.BotState;
 import com.telegrambot.codeforcesRatingbot.cache.UserCache;
+import com.telegrambot.codeforcesRatingbot.model.RatingChange;
 import com.telegrambot.codeforcesRatingbot.model.UserRatingSubscription;
 import com.telegrambot.codeforcesRatingbot.reply.Reply;
 import com.telegrambot.codeforcesRatingbot.sender.CommonMessages;
+import com.telegrambot.codeforcesRatingbot.service.InfoRetrievingService;
 import com.telegrambot.codeforcesRatingbot.service.UserRatingService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
 
@@ -24,15 +27,26 @@ public class ProfileSubscribeReply implements Reply {
     CommonMessages messageService;
     @Autowired
     UserCache userCache;
+    @Autowired
+    InfoRetrievingService infoRetrievingService;
 
     @Override
     public SendMessage sendMessage(Message message) {
         String profile = message.getText();
         long chatId = message.getChatId();
         int userId = message.getFrom().getId();
-        // TODO(aibyn) Add Validtor for name
-        subscriptionService.saveUserSubscription(new UserRatingSubscription(chatId, profile));
-        logger.info("User id = {} subscribed to -> {}", chatId, profile);
+        RatingChange ratingChange = null;
+        try {
+            ratingChange = infoRetrievingService.retrieveRatingChangeByUsername(profile);
+        } catch (HttpClientErrorException.BadRequest e) {
+            return messageService.sendWarningMessage(chatId, "There is no profile with \"" + profile + "\" name. Please try again");
+        } catch (RuntimeException e) {
+            return messageService.sendWarningMessage(chatId, "Couldn't access the Codeforces. Server is error. Please try again");
+        }
+        int lastContestParticipated = (ratingChange == null ? 0 : ratingChange.getContestId());
+        subscriptionService.saveUserSubscription(new UserRatingSubscription(chatId, lastContestParticipated, profile));
+
+        logger.info("Chat id = {} subscribed to -> {}", chatId, profile);
         userCache.setUserBotState(userId, BotState.NULL_STATE);
         return messageService.sendMessage(message.getChatId(), "Successfully subscribed");
     }
