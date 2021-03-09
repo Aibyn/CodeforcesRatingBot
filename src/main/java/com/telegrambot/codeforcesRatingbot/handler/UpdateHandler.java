@@ -36,15 +36,19 @@ public class UpdateHandler {
         //TODD(aibyn) Add /cancel method
         switch (text) {
             case "/help":
+            case "Help":
                 botState = BotState.SHOW_HELP_MENU;
                 break;
             case "/add_profile":
+            case "Add Profile":
                 botState = BotState.SUBSCRIPTION_START;
                 break;
             case "/delete_profile":
+            case "Delete Profile":
                 botState = BotState.UNSUBSCRIPTION_START;
                 break;
             case "/list_profile":
+            case "Show Profile List":
                 botState = BotState.SHOW_SUBSCRIPTION_LIST;
                 break;
             default:
