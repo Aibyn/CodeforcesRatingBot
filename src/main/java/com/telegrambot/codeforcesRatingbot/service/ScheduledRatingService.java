@@ -7,6 +7,7 @@ import com.telegrambot.codeforcesRatingbot.sender.CommonMessages;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
@@ -26,10 +27,12 @@ public class ScheduledRatingService {
 
     @Autowired
     CommonMessages messageService;
-
+    //TODO(aibyn) Change the way to process subscriptions. Better to get contests in whole.
+    @Scheduled(fixedRateString = "${subscriptions.processPeriod}")
     private void processAllSubscriptions() {
-        logger.info("Here starts subscription services");
+        logger.info("Stars subscription process services");
         userRatingService.allSubscription().forEach(this::handleSubscription);
+        logger.info("Ends subscription process services");
     }
 
     public void handleSubscription(UserRatingSubscription subscription) {
