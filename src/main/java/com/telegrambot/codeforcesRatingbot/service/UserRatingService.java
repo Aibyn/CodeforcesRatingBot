@@ -12,6 +12,10 @@ public class UserRatingService {
     @Autowired
     UserSpringDataRepository userSpringDataRepository;
 
+    public List<UserRatingSubscription> allSubscription() {
+        return userSpringDataRepository.findAll();
+    }
+
     public List<UserRatingSubscription> findByChatId(long chadId) {
         return userSpringDataRepository.findByChatId(chadId);
     }
