@@ -3,6 +3,7 @@ package com.telegrambot.codeforcesRatingbot.reply;
 import com.telegrambot.codeforcesRatingbot.sender.CommonMessages;
 import com.telegrambot.codeforcesRatingbot.bot.BotState;
 import com.telegrambot.codeforcesRatingbot.cache.UserCache;
+import com.telegrambot.codeforcesRatingbot.sender.MainMenuKeyboardMessages;
 import com.telegrambot.codeforcesRatingbot.service.CommandGetterService;
 import lombok.NoArgsConstructor;
 import org.slf4j.Logger;
@@ -24,7 +25,7 @@ public class HelpReply implements Reply {
     @Autowired
     CommandGetterService commandGetterService;
     @Autowired
-    CommonMessages commonMessages;
+    MainMenuKeyboardMessages mainMenuKeyboardMessages;
     @Autowired
     UserCache userCache;
 
@@ -33,7 +34,7 @@ public class HelpReply implements Reply {
         userCache.setUserBotState(message.getFrom().getId(), BotState.NULL_STATE);
         List<BotCommand> botCommands = commandGetterService.getCommands();
         if (botCommands == null) {
-            return commonMessages.sendWarningMessage(message.getChatId(), "Couldn't load commands. Please try again next time");
+            return mainMenuKeyboardMessages.sendMessage(message.getChatId(), "Couldn't load commands. Please try again next time");
         }
         StringBuilder commands = new StringBuilder();
         commands.append("Here is the list commands you can use\n");
@@ -41,7 +42,8 @@ public class HelpReply implements Reply {
             commands.append("/" + botCommand.getCommand() + " - " + botCommand.getDescription() + '\n');
         });
         commands.deleteCharAt(commands.length() - 1);
-        return commonMessages.sendMessage(message.getChatId(), commands.toString());
+        logger.info("HELPCOMMAND -> commands={} | chatId={}", commands.toString(), message.getChatId());
+        return mainMenuKeyboardMessages.sendMessage(message.getChatId(), commands.toString());
     }
 
     @Override
