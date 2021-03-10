@@ -25,7 +25,7 @@ public class ProfileReply implements Reply {
         ProfileState profileState = getProfileStateThroughUser(userCache.getCurrentBotState(userId));
         userCache.setUserBotState(message.getFrom().getId(), (profileState.equals(ProfileState.SUBSCRIBE) ? BotState.SUBSCRIPTION_PROCESS : BotState.UNSUBSCRIPTION_PROCESS));
         String action = (profileState.equals(ProfileState.SUBSCRIBE) ? "follow" : "unfollow");
-        return messageService.sendMessage(message.getChatId(), "Please write codeforces username that you want to " + action);
+        return messageService.sendMessage(message.getChatId(), "reply.profile.start.action", action);
     }
 
     private ProfileState getProfileStateThroughUser(BotState currentBotState) {

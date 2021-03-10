@@ -30,13 +30,15 @@ public class ProfileList implements Reply {
     public SendMessage sendMessage(Message message) {
         long chatId = message.getChatId();
         List<UserRatingSubscription> profileList = subscriptionService.findByChatId(chatId);
+        if (profileList.size() == 0) {
+            return messageService.sendMessage(chatId, "reply.list.profiles.noData");
+        }
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("Here is list of profiles that you subscribed:\n");
         profileList.forEach(userRatingSubscription -> {
-            stringBuilder.append(userRatingSubscription.getProfile() + "\n");
+            stringBuilder.append("*" + userRatingSubscription.getProfile() + "*\n");
         });
         stringBuilder.deleteCharAt(stringBuilder.length() - 1);
-        return messageService.sendMessage(chatId, stringBuilder.toString());
+        return messageService.sendMessage(chatId, "reply.list.profiles", stringBuilder.toString());
     }
 
     @Override
