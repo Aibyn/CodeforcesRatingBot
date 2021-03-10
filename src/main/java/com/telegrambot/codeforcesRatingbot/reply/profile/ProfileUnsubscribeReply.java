@@ -37,14 +37,14 @@ public class ProfileUnsubscribeReply implements Reply {
         List<UserRatingSubscription> profileList = subscriptionService.findByChatId(chatId);
         Optional<UserRatingSubscription> toDeleteOptional = profileList.stream().filter(arr -> profile.equals(arr.getProfile())).findFirst();
         if (toDeleteOptional.isEmpty()) {
-            return messageService.sendMessage(chatId, "There is no such profile in your list. Please try again");
+            return messageService.sendWarningMessage(chatId, "reply.profile.action.unsubscribe.userError");
         }
 
         userCache.setUserBotState(userId, BotState.NULL_STATE);
         UserRatingSubscription toDelete = toDeleteOptional.get();
         subscriptionService.deleteUserSubscription(toDelete);
         logger.info("User id = {} unsubscribed from -> {}", chatId, profile);
-        return messageService.sendMessage(message.getChatId(), "Successfully unsubscribed");
+        return messageService.sendSuccessMessage(message.getChatId(), "reply.profile.action.unsubscribe.success");
     }
 
     @Override

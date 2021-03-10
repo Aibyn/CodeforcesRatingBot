@@ -1,4 +1,0 @@
-/help - Lists all available commands
-/add_profile - Add Codeforces username that you want to follow the rating change
-/delete_profile - Delete Codeforces username that you want to unfollow
-/list_profile - Shows the list of profiles that you following
