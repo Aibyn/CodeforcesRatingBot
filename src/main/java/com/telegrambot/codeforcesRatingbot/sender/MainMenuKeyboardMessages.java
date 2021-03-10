@@ -1,5 +1,7 @@
 package com.telegrambot.codeforcesRatingbot.sender;
 
+import com.telegrambot.codeforcesRatingbot.util.Emojis;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMarkup;
@@ -20,7 +22,7 @@ public class MainMenuKeyboardMessages {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setText(testMessage);
         sendMessage.setChatId(Long.toString(chatId));
-        sendMessage.enableMarkdown(false);
+        sendMessage.enableMarkdown(true);
         sendMessage.setReplyMarkup(keyboardMarkup);
         return sendMessage;
     }
@@ -32,10 +34,10 @@ public class MainMenuKeyboardMessages {
         keyboardMarkup.setSelective(false);
 
         List<KeyboardRow> keyboardRowList = new ArrayList<>();
-        keyboardRowList.add(addButton("Add Profile"));
-        keyboardRowList.add(addButton("Delete Profile"));
-        keyboardRowList.add(addButton("Show Profile List"));
-        keyboardRowList.add(addButton("Help"));
+        keyboardRowList.add(addButton(Emojis.BELL + "Add Profile"));
+        keyboardRowList.add(addButton(Emojis.TRASH_BIN + "Delete Profile"));
+        keyboardRowList.add(addButton(Emojis.SCROLL + "Show Profile List"));
+        keyboardRowList.add(addButton(Emojis.QUESTION_MARK + "Help"));
 
         keyboardMarkup.setKeyboard(keyboardRowList);
         return keyboardMarkup;
