@@ -39,6 +39,7 @@ public class ScheduledRatingService {
         long chatId = subscription.getChatId();
         long lastContest = subscription.getLastContest();
         String profile = subscription.getProfile();
+        //TODO (aibyn) Reacting different depending on rating change.
         try {
             RatingChange ratingChange = infoRetrievingService.retrieveRatingChangeByUsername(profile);
 

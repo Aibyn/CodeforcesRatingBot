@@ -8,6 +8,7 @@ import com.telegrambot.codeforcesRatingbot.reply.Reply;
 import com.telegrambot.codeforcesRatingbot.sender.CommonMessages;
 import com.telegrambot.codeforcesRatingbot.service.InfoRetrievingService;
 import com.telegrambot.codeforcesRatingbot.service.UserRatingService;
+import com.telegrambot.codeforcesRatingbot.util.Emojis;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,16 +40,16 @@ public class ProfileSubscribeReply implements Reply {
         try {
             ratingChange = infoRetrievingService.retrieveRatingChangeByUsername(profile);
         } catch (HttpClientErrorException.BadRequest e) {
-            return messageService.sendWarningMessage(chatId, "There is no profile with \"" + profile + "\" name. Please try again");
+            return messageService.sendWarningMessage(chatId, "reply.profile.action.subscribe.userError");
         } catch (RuntimeException e) {
-            return messageService.sendWarningMessage(chatId, "Couldn't access the Codeforces. Server is error. Please try again");
+            return messageService.sendMessage(chatId, "reply.profile.action.subscribe.serverError", Emojis.FAIL_SERVER_MARK);
         }
         int lastContestParticipated = (ratingChange == null ? 0 : ratingChange.getContestId());
         subscriptionService.saveUserSubscription(new UserRatingSubscription(chatId, lastContestParticipated, profile));
 
         logger.info("Chat id = {} subscribed to -> {}", chatId, profile);
         userCache.setUserBotState(userId, BotState.NULL_STATE);
-        return messageService.sendMessage(message.getChatId(), "Successfully subscribed");
+        return messageService.sendSuccessMessage(message.getChatId(), "reply.profile.action.subscribe.success");
     }
 
     @Override
