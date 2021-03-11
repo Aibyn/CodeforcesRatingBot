@@ -32,6 +32,7 @@ public class CommonMessages {
     private SendMessage createSendMessage(String chatId, String message) {
         SendMessage sendMessage = new SendMessage(chatId, message);
         sendMessage.enableMarkdown(true);
+        sendMessage.disableWebPagePreview();
         return sendMessage;
     }
 
