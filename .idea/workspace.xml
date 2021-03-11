@@ -22,10 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac550242-d465-4dc7-8e6b-acf56ceca4dc" name="Default Changelist" comment="Added new user error that can be caught.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/controller/WebHookController.java" afterDir="false" />
+    <list default="true" id="ac550242-d465-4dc7-8e6b-acf56ceca4dc" name="Default Changelist" comment="Changed from Polling to Webhook.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/bot/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/bot/Bot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/service/InfoRetrievingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/service/InfoRetrievingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -253,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615439364639</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Changed from Polling to Webhook.">
+      <created>1615440402375</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1615440402375</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -288,7 +294,8 @@
     <MESSAGE value="Reformatted messaging and added emojis." />
     <MESSAGE value="Reformatted message for rating change update." />
     <MESSAGE value="Added new user error that can be caught." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new user error that can be caught." />
+    <MESSAGE value="Changed from Polling to Webhook." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed from Polling to Webhook." />
   </component>
   <component name="WindowStateProjectService">
     <state x="408" y="268" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1614767114928">
@@ -335,10 +342,10 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="208" y="41" key="SettingsEditor/0.25.1440.875@0.25.1440.875" timestamp="1614669363465" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1615438369032">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1615440721798">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/0.25.1440.875@0.25.1440.875" timestamp="1615438369032" />
+    <state width="500" height="445" key="SwitcherDM/0.25.1440.875@0.25.1440.875" timestamp="1615440721798" />
     <state x="523" y="380" key="VCS.ChangelistChooser" timestamp="1614850602318">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
