@@ -23,6 +23,7 @@ public class MainMenuKeyboardMessages {
         sendMessage.setText(testMessage);
         sendMessage.setChatId(Long.toString(chatId));
         sendMessage.enableMarkdown(true);
+        sendMessage.disableWebPagePreview();
         sendMessage.setReplyMarkup(keyboardMarkup);
         return sendMessage;
     }
