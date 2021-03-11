@@ -45,10 +45,10 @@ public class Bot extends TelegramLongPollingBot {
         }
         Message message = update.getMessage();
         SendMessage sendMessage = updateHandler.handle(message);
-        ExecuteSendMessage(sendMessage);
+        executeSendMessage(sendMessage);
     }
 
-    void ExecuteSendMessage(SendMessage sendMessage) {
+    public void executeSendMessage(SendMessage sendMessage) {
         try {
             execute(sendMessage);
         } catch (TelegramApiException e) {
