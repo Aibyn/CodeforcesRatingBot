@@ -9,7 +9,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
-import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 @Service
 public class ScheduledRatingService {
@@ -17,7 +16,7 @@ public class ScheduledRatingService {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
-    UserRatingService userRatingService;
+    UserRatingRepositoryService userRatingRepositryService;
 
     @Autowired
     InfoRetrievingService infoRetrievingService;
@@ -31,7 +30,7 @@ public class ScheduledRatingService {
     @Scheduled(fixedRateString = "${subscriptions.processPeriod}")
     private void processAllSubscriptions() {
         logger.info("Stars subscription process services");
-        userRatingService.allSubscription().forEach(this::handleSubscription);
+        userRatingRepositryService.allSubscription().forEach(this::handleSubscription);
         logger.info("Ends subscription process services");
     }
 

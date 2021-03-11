@@ -8,5 +8,6 @@ import java.util.List;
 
 @Repository
 public interface UserSpringDataRepository extends JpaRepository<UserRatingSubscription, String> {
-    List<UserRatingSubscription> findByChatId(long userId);
+    List<UserRatingSubscription> findByChatId(long chatId);
+    List<UserRatingSubscription> findByChatIdAndProfile(long chatId, String profile);
 }
