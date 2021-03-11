@@ -11,6 +11,9 @@ public enum Emojis {
     FAIL_USER_MARK(EmojiParser.parseToUnicode(":no_good:")),
     QUESTION_MARK(EmojiParser.parseToUnicode(":question:")),
     ADVICE(EmojiParser.parseToUnicode(":information_source:")),
+    UPWARD_TREND(EmojiParser.parseToUnicode(":chart_with_upwards_trend:")),
+    DOWNWARD_TREND(EmojiParser.parseToUnicode(":chart_with_downwards_trend:")),
+    NEW(EmojiParser.parseToUnicode(":new:")),
     SUCCESS_MARK(EmojiParser.parseToUnicode(":white_check_mark:"));
 
 
