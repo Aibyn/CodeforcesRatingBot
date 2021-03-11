@@ -53,14 +53,12 @@ public class ScheduledRatingService {
             }
 
             int ratingDiff = ratingChange.getNewRating() - ratingChange.getOldRating();
-
             String sign = (ratingDiff > 0 ? "+" : "");
+            String contestTitle = ratingChange.getContestName();
 
-            telegramBot.execute(messageService.sendMessage(chatId, sign + Integer.toString(ratingDiff) + " your rating change\n"));
+            telegramBot.executeSendMessage(messageService.sendMessage(chatId, "reply.scheduled.subscription.ratingChange", profile, profile, sign, ratingDiff, contestTitle));
         } catch (RuntimeException e) {
             logger.warn("Couldn't get subscription information from Codeforces API");
-        } catch (TelegramApiException e) {
-            e.printStackTrace();
         }
     }
 
