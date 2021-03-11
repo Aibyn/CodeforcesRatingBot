@@ -18,10 +18,8 @@ import java.util.Arrays;
 @Service
 public class InfoRetrievingService {
 
-    @Value("${codeforces.api}")
-    String codeforcesApiUrl;
-    @Value("${codeforces.get.user.rating}")
-    String codeforcesGetUserRating;
+    String codeforcesApiUrl = "https://codeforces.com/api/";
+    String codeforcesGetUserRating = "user.rating";
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
