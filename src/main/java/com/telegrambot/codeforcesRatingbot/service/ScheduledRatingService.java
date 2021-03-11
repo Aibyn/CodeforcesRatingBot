@@ -55,7 +55,7 @@ public class ScheduledRatingService {
             String sign = (ratingDiff > 0 ? "+" : "");
             String contestTitle = ratingChange.getContestName();
 
-            telegramBot.executeSendMessage(messageService.sendMessage(chatId, "reply.scheduled.subscription.ratingChange", profile, profile, sign, ratingDiff, contestTitle));
+            telegramBot.executeSendMessage(messageService.sendMessage(chatId, "reply.scheduled.subscription.ratingChange", profile, sign, ratingDiff, contestTitle));
         } catch (RuntimeException e) {
             logger.warn("Couldn't get subscription information from Codeforces API");
         }
