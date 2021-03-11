@@ -37,9 +37,9 @@ public class InfoRetrievingService {
 
     public RatingChange retrieveRatingChangeByUsername(String username) {
         String url = codeforcesApiUrl + codeforcesGetUserRating + "?handle=" + username;
+        int tryCount = 5;
         boolean again = true;
         RatingChange ratingChange = null;
-        int tryCount = 5;
         while (again && tryCount > 0) {
             tryCount--;
             try {
@@ -63,7 +63,6 @@ public class InfoRetrievingService {
                 throw e;
             } catch (HttpClientErrorException e) {
                 logger.warn("Http 400 exceptions -> {} for this username -> {}", e.getLocalizedMessage(), username);
-                again = false;
                 throw new RuntimeException("Couldn't access. Http 400 type error" );
             }
         }

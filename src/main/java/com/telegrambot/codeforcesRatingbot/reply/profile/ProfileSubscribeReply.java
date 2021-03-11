@@ -7,7 +7,7 @@ import com.telegrambot.codeforcesRatingbot.model.UserRatingSubscription;
 import com.telegrambot.codeforcesRatingbot.reply.Reply;
 import com.telegrambot.codeforcesRatingbot.sender.CommonMessages;
 import com.telegrambot.codeforcesRatingbot.service.InfoRetrievingService;
-import com.telegrambot.codeforcesRatingbot.service.UserRatingService;
+import com.telegrambot.codeforcesRatingbot.service.UserRatingRepositoryService;
 import com.telegrambot.codeforcesRatingbot.util.Emojis;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,13 +17,15 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
 
+import java.util.Optional;
+
 @Service
 public class ProfileSubscribeReply implements Reply {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
-    UserRatingService subscriptionService;
+    UserRatingRepositoryService subscriptionService;
     @Autowired
     CommonMessages messageService;
     @Autowired
@@ -36,11 +38,16 @@ public class ProfileSubscribeReply implements Reply {
         String profile = message.getText();
         long chatId = message.getChatId();
         int userId = message.getFrom().getId();
+        Optional<UserRatingSubscription> userRatingSubscriptionOptional = subscriptionService.findByChatIdAndProfile(chatId, profile);
+        if (userRatingSubscriptionOptional.isPresent()) {
+            userCache.setUserBotState(userId, BotState.NULL_STATE);
+            return messageService.sendWarningMessage(chatId, "reply.profile.action.subscribe.userDuplicate");
+        }
         RatingChange ratingChange = null;
         try {
             ratingChange = infoRetrievingService.retrieveRatingChangeByUsername(profile);
         } catch (HttpClientErrorException.BadRequest e) {
-            return messageService.sendWarningMessage(chatId, "reply.profile.action.subscribe.userError");
+            return messageService.sendWarningMessage(chatId, "reply.profile.action.subscribe.userBadRequest");
         } catch (RuntimeException e) {
             return messageService.sendMessage(chatId, "reply.profile.action.subscribe.serverError", Emojis.FAIL_SERVER_MARK);
         }
