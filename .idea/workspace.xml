@@ -13,22 +13,16 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac550242-d465-4dc7-8e6b-acf56ceca4dc" name="Default Changelist" comment="Rewritten Help for more clarity.">
+    <list default="true" id="ac550242-d465-4dc7-8e6b-acf56ceca4dc" name="Default Changelist" comment="Rewritten profile list to look better.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/model/Profile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/sender/CommonMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/sender/CommonMessages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/sender/MainMenuKeyboardMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/sender/MainMenuKeyboardMessages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/service/ScheduledRatingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/service/ScheduledRatingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/util/Emojis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/util/Emojis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/CodeforcesRatingBotApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/CodeforcesRatingBotApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/reply/profile/ProfileList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/reply/profile/ProfileList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/service/InfoRetrievingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/service/InfoRetrievingService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +78,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="developer" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
@@ -314,7 +313,8 @@
     <MESSAGE value="Changed from Polling to Webhook." />
     <MESSAGE value="Moved codeforces api links from properties to method itself." />
     <MESSAGE value="Rewritten Help for more clarity." />
-    <option name="LAST_COMMIT_MESSAGE" value="Rewritten Help for more clarity." />
+    <MESSAGE value="Rewritten profile list to look better." />
+    <option name="LAST_COMMIT_MESSAGE" value="Rewritten profile list to look better." />
   </component>
   <component name="WindowStateProjectService">
     <state x="408" y="268" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1614767114928">
@@ -341,22 +341,22 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="100" y="125" width="1240" height="675" key="DiffContextDialog/0.25.1440.875@0.25.1440.875" timestamp="1614773581748" />
-    <state width="1398" height="218" key="GridCell.Tab.0.bottom" timestamp="1615443869742">
+    <state width="1398" height="218" key="GridCell.Tab.0.bottom" timestamp="1615459822677">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="218" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1615443869742" />
-    <state width="1398" height="218" key="GridCell.Tab.0.center" timestamp="1615443869741">
+    <state width="1398" height="218" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1615459822677" />
+    <state width="1398" height="218" key="GridCell.Tab.0.center" timestamp="1615459822676">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="218" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1615443869741" />
-    <state width="1398" height="218" key="GridCell.Tab.0.left" timestamp="1615443869740">
+    <state width="1398" height="218" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1615459822676" />
+    <state width="1398" height="218" key="GridCell.Tab.0.left" timestamp="1615459822675">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="218" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1615443869740" />
-    <state width="1398" height="218" key="GridCell.Tab.0.right" timestamp="1615443869741">
+    <state width="1398" height="218" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1615459822675" />
+    <state width="1398" height="218" key="GridCell.Tab.0.right" timestamp="1615459822676">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="218" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1615443869741" />
+    <state width="1398" height="218" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1615459822676" />
     <state x="349" y="169" key="RollbackChangesDialog" timestamp="1615443919119">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
@@ -373,6 +373,10 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="523" y="380" key="VCS.ChangelistChooser/0.25.1440.875@0.25.1440.875" timestamp="1614850602318" />
+    <state x="320" y="199" key="Vcs.Push.Dialog.v2" timestamp="1615454484844">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="320" y="199" key="Vcs.Push.Dialog.v2/0.25.1440.875@0.25.1440.875" timestamp="1615454484844" />
     <state x="511" y="244" key="chooseDestDirectoryDialog" timestamp="1615373149942">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
@@ -397,9 +401,9 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="385" y="210" width="670" height="675" key="run.anything.popup/0.25.1440.875@0.25.1440.875" timestamp="1614851229373" />
-    <state x="385" y="214" width="670" height="676" key="search.everywhere.popup" timestamp="1615434319408">
+    <state x="385" y="214" width="670" height="676" key="search.everywhere.popup" timestamp="1615455474315">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="385" y="214" width="670" height="676" key="search.everywhere.popup/0.25.1440.875@0.25.1440.875" timestamp="1615434319408" />
+    <state x="385" y="214" width="670" height="676" key="search.everywhere.popup/0.25.1440.875@0.25.1440.875" timestamp="1615455474315" />
   </component>
 </project>
