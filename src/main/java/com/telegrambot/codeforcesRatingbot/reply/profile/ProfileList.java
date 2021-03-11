@@ -5,7 +5,7 @@ import com.telegrambot.codeforcesRatingbot.cache.UserCache;
 import com.telegrambot.codeforcesRatingbot.model.UserRatingSubscription;
 import com.telegrambot.codeforcesRatingbot.reply.Reply;
 import com.telegrambot.codeforcesRatingbot.sender.CommonMessages;
-import com.telegrambot.codeforcesRatingbot.service.UserRatingService;
+import com.telegrambot.codeforcesRatingbot.service.UserRatingRepositoryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,7 @@ public class ProfileList implements Reply {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
-    UserRatingService subscriptionService;
+    UserRatingRepositoryService subscriptionService;
     @Autowired
     CommonMessages messageService;
     @Autowired
