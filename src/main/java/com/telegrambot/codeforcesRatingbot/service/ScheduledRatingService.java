@@ -4,6 +4,7 @@ import com.telegrambot.codeforcesRatingbot.bot.Bot;
 import com.telegrambot.codeforcesRatingbot.model.RatingChange;
 import com.telegrambot.codeforcesRatingbot.model.UserRatingSubscription;
 import com.telegrambot.codeforcesRatingbot.sender.CommonMessages;
+import com.telegrambot.codeforcesRatingbot.util.Emojis;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,10 +53,12 @@ public class ScheduledRatingService {
             }
 
             int ratingDiff = ratingChange.getNewRating() - ratingChange.getOldRating();
-            String sign = (ratingDiff > 0 ? "+" : "");
+            String sign = (ratingDiff >= 0 ? "+" : "");
             String contestTitle = ratingChange.getContestName();
 
-            telegramBot.executeSendMessage(messageService.sendMessage(chatId, "reply.scheduled.subscription.ratingChange", profile, sign, ratingDiff, contestTitle));
+            telegramBot.executeSendMessage(messageService.sendMessage(chatId,
+                    "reply.scheduled.subscription.ratingChange",
+                    Emojis.NEW, (sign == "+" ? Emojis.UPWARD_TREND : Emojis.DOWNWARD_TREND), profile, sign, ratingDiff, contestTitle, contestId));
         } catch (RuntimeException e) {
             logger.warn("Couldn't get subscription information from Codeforces API");
         }
