@@ -43,7 +43,7 @@ public class ProfileUnsubscribeReply implements Reply {
         userCache.setUserBotState(userId, BotState.NULL_STATE);
         UserRatingSubscription toDelete = toDeleteOptional.get();
         subscriptionService.deleteUserSubscription(toDelete);
-        logger.info("User id = {} unsubscribed from -> {}", chatId, profile);
+        logger.info("Chat id = {} unsubscribed from -> {}", chatId, profile);
         return messageService.sendSuccessMessage(message.getChatId(), "reply.profile.action.unsubscribe.success");
     }
 
