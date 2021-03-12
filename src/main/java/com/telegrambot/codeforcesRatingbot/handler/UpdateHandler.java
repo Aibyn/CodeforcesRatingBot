@@ -39,10 +39,8 @@ public class UpdateHandler {
             case "/list_profile", "\uD83D\uDCDCShow Profile List" -> BotState.SHOW_SUBSCRIPTION_LIST;
             default -> userCache.getCurrentBotState(user.getId());
         };
-        //TODO (aibyn) Add /cancel method
         userCache.setUserBotState(user.getId(), botState);
         Reply reply = handleReplyToBotState(botState);
-        logger.info("This is my reply and BotState -> {} and {}", reply, botState);
         return reply.sendMessage(message);
     }
 
