@@ -21,39 +21,25 @@ public class UpdateHandler {
     @Autowired
     UserCache userCache;
 
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     Map<BotState, Reply> replyToBotState = new HashMap<>();
 
     public UpdateHandler(List<Reply> replyList) {
-        replyList.forEach(reply -> {replyToBotState.put(reply.getReplyName(), reply);});
+        replyList.forEach(reply -> replyToBotState.put(reply.getReplyName(), reply));
     }
 
     public SendMessage handle(Message message) {
         User user = message.getFrom();
         String text = message.getText();
-        BotState botState = null;
-        //TODD(aibyn) Add /cancel method
-        switch (text) {
-            case "/help":
-            case "❓Help":
-                botState = BotState.SHOW_HELP_MENU;
-                break;
-            case "/add_profile":
-            case "\uD83D\uDD14Add Profile":
-                botState = BotState.SUBSCRIPTION_START;
-                break;
-            case "/delete_profile":
-            case "\uD83D\uDDD1Delete Profile":
-                botState = BotState.UNSUBSCRIPTION_START;
-                break;
-            case "/list_profile":
-            case "\uD83D\uDCDCShow Profile List":
-                botState = BotState.SHOW_SUBSCRIPTION_LIST;
-                break;
-            default:
-                botState = userCache.getCurrentBotState(user.getId());
-        }
+        BotState botState = switch (text) {
+            case "/help", "❓Help" -> BotState.SHOW_HELP_MENU;
+            case "/add_profile", "\uD83D\uDD14Add Profile" -> BotState.SUBSCRIPTION_START;
+            case "/delete_profile", "\uD83D\uDDD1Delete Profile" -> BotState.UNSUBSCRIPTION_START;
+            case "/list_profile", "\uD83D\uDCDCShow Profile List" -> BotState.SHOW_SUBSCRIPTION_LIST;
+            default -> userCache.getCurrentBotState(user.getId());
+        };
+        //TODO (aibyn) Add /cancel method
         userCache.setUserBotState(user.getId(), botState);
         Reply reply = handleReplyToBotState(botState);
         logger.info("This is my reply and BotState -> {} and {}", reply, botState);
@@ -71,12 +57,9 @@ public class UpdateHandler {
     }
 
     private boolean isProfileUpdate(BotState botState) {
-        switch (botState) {
-            case SUBSCRIPTION_START:
-            case UNSUBSCRIPTION_START:
-                return true;
-            default:
-                return false;
-        }
+        return switch (botState) {
+            case SUBSCRIPTION_START, UNSUBSCRIPTION_START -> true;
+            default -> false;
+        };
     }
 }

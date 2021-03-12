@@ -1,7 +1,6 @@
 package com.telegrambot.codeforcesRatingbot.sender;
 
 import com.telegrambot.codeforcesRatingbot.util.Emojis;
-import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMarkup;
