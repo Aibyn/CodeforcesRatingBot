@@ -1,9 +1,7 @@
 package com.telegrambot.codeforcesRatingbot.cache;
 
 import com.telegrambot.codeforcesRatingbot.bot.BotState;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-import org.telegram.telegrambots.meta.api.objects.User;
 
 import java.util.HashMap;
 import java.util.Map;

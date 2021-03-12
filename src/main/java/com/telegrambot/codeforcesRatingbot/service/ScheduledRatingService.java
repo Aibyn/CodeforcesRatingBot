@@ -14,10 +14,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class ScheduledRatingService {
 
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
-    UserRatingRepositoryService userRatingRepositryService;
+    UserRatingRepositoryService userRatingRepositoryService;
 
     @Autowired
     InfoRetrievingService infoRetrievingService;
@@ -31,7 +31,7 @@ public class ScheduledRatingService {
     @Scheduled(fixedRateString = "${subscriptions.processPeriod}")
     private void processAllSubscriptions() {
         logger.info("Stars subscription process services");
-        userRatingRepositryService.allSubscription().forEach(this::handleSubscription);
+        userRatingRepositoryService.allSubscription().forEach(this::handleSubscription);
         logger.info("Ends subscription process services");
     }
 
@@ -58,7 +58,7 @@ public class ScheduledRatingService {
 
             telegramBot.executeSendMessage(messageService.sendMessage(chatId,
                     "reply.scheduled.subscription.ratingChange",
-                    Emojis.NEW, (sign == "+" ? Emojis.UPWARD_TREND : Emojis.DOWNWARD_TREND), profile, sign, ratingDiff, contestTitle, contestId));
+                    Emojis.NEW, (sign.equals("+") ? Emojis.UPWARD_TREND : Emojis.DOWNWARD_TREND), profile, sign, ratingDiff, contestTitle, contestId));
         } catch (RuntimeException e) {
             logger.warn("Couldn't get subscription information from Codeforces API");
         }
