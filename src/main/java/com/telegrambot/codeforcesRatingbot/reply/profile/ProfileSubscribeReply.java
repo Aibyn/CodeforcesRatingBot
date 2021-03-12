@@ -22,7 +22,7 @@ import java.util.Optional;
 @Service
 public class ProfileSubscribeReply implements Reply {
 
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     UserRatingRepositoryService subscriptionService;
@@ -43,7 +43,7 @@ public class ProfileSubscribeReply implements Reply {
             userCache.setUserBotState(userId, BotState.NULL_STATE);
             return messageService.sendWarningMessage(chatId, "reply.profile.action.subscribe.userDuplicate");
         }
-        RatingChange ratingChange = null;
+        RatingChange ratingChange;
         try {
             ratingChange = infoRetrievingService.retrieveRatingChangeByUsername(profile);
         } catch (HttpClientErrorException.BadRequest e) {
