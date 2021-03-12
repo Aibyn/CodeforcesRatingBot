@@ -23,10 +23,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac550242-d465-4dc7-8e6b-acf56ceca4dc" name="Default Changelist" comment="Configured application.properties.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/service/PingService.java" afterDir="false" />
+    <list default="true" id="ac550242-d465-4dc7-8e6b-acf56ceca4dc" name="Default Changelist" comment="Added Ping services for Heroku.">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/system.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +54,12 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="CodeforcesRatingBot" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CodeforcesRatingBot" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -100,7 +105,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
@@ -116,9 +121,10 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="gradle build" />
+      <command value="gradle build -x check" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.CodeforcesRatingBotApplication">
+  <component name="RunManager" selected="Gradle.CodeforcesRatingBot [build]">
     <configuration name="CodeforcesRatingBotApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.telegrambot.codeforcesRatingbot.CodeforcesRatingBotApplication" />
       <module name="CodeforcesRatingBot.main" />
@@ -314,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615534664259</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Added Ping services for Heroku.">
+      <created>1615535156560</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1615535156560</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -342,7 +355,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added default reply for unnoticed actions" />
     <MESSAGE value="Made changes to Reply" />
     <MESSAGE value="Added reply to commands." />
     <MESSAGE value="Added working repository" />
@@ -367,9 +379,14 @@
     <MESSAGE value="Fixed the typo in messages." />
     <MESSAGE value="Refactored the loggers." />
     <MESSAGE value="Configured application.properties." />
-    <option name="LAST_COMMIT_MESSAGE" value="Configured application.properties." />
+    <MESSAGE value="Added Ping services for Heroku." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Ping services for Heroku." />
   </component>
   <component name="WindowStateProjectService">
+    <state x="208" y="41" key="#Project_Structure" timestamp="1615535711128">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="208" y="41" key="#Project_Structure/0.25.1440.875@0.25.1440.875" timestamp="1615535711128" />
     <state x="408" y="268" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1614767114928">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
@@ -394,22 +411,22 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="100" y="125" width="1240" height="675" key="DiffContextDialog/0.25.1440.875@0.25.1440.875" timestamp="1614773581748" />
-    <state width="1398" height="218" key="GridCell.Tab.0.bottom" timestamp="1615535102178">
+    <state width="1398" height="218" key="GridCell.Tab.0.bottom" timestamp="1615535697642">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="218" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1615535102178" />
-    <state width="1398" height="218" key="GridCell.Tab.0.center" timestamp="1615535102178">
+    <state width="1398" height="218" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1615535697642" />
+    <state width="1398" height="218" key="GridCell.Tab.0.center" timestamp="1615535697641">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="218" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1615535102178" />
-    <state width="1398" height="218" key="GridCell.Tab.0.left" timestamp="1615535102177">
+    <state width="1398" height="218" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1615535697641" />
+    <state width="1398" height="218" key="GridCell.Tab.0.left" timestamp="1615535697641">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="218" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1615535102177" />
-    <state width="1398" height="218" key="GridCell.Tab.0.right" timestamp="1615535102178">
+    <state width="1398" height="218" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1615535697641" />
+    <state width="1398" height="218" key="GridCell.Tab.0.right" timestamp="1615535697641">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="218" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1615535102178" />
+    <state width="1398" height="218" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1615535697641" />
     <state x="349" y="169" key="RollbackChangesDialog" timestamp="1615443919119">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
@@ -426,10 +443,10 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="523" y="380" key="VCS.ChangelistChooser/0.25.1440.875@0.25.1440.875" timestamp="1614850602318" />
-    <state x="320" y="199" key="Vcs.Push.Dialog.v2" timestamp="1615534482236">
+    <state x="320" y="199" key="Vcs.Push.Dialog.v2" timestamp="1615535180081">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="320" y="199" key="Vcs.Push.Dialog.v2/0.25.1440.875@0.25.1440.875" timestamp="1615534482236" />
+    <state x="320" y="199" key="Vcs.Push.Dialog.v2/0.25.1440.875@0.25.1440.875" timestamp="1615535180081" />
     <state x="511" y="244" key="chooseDestDirectoryDialog" timestamp="1615373149942">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
@@ -450,10 +467,10 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="318" y="121" key="new project wizard/0.25.1440.875@0.25.1440.875" timestamp="1614851363092" />
-    <state x="385" y="210" width="670" height="675" key="run.anything.popup" timestamp="1614851229373">
+    <state x="385" y="210" width="670" height="675" key="run.anything.popup" timestamp="1615535544374">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="385" y="210" width="670" height="675" key="run.anything.popup/0.25.1440.875@0.25.1440.875" timestamp="1614851229373" />
+    <state x="385" y="210" width="670" height="675" key="run.anything.popup/0.25.1440.875@0.25.1440.875" timestamp="1615535544374" />
     <state x="385" y="214" width="670" height="676" key="search.everywhere.popup" timestamp="1615455474315">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
