@@ -23,7 +23,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac550242-d465-4dc7-8e6b-acf56ceca4dc" name="Default Changelist" comment="Refactored the loggers.">
+    <list default="true" id="ac550242-d465-4dc7-8e6b-acf56ceca4dc" name="Default Changelist" comment="Configured application.properties.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/service/PingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
@@ -306,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615534454339</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Configured application.properties.">
+      <created>1615534664259</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1615534664259</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -334,7 +342,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added add_profile reply and delete_profile reply also start meny reply" />
     <MESSAGE value="Added default reply for unnoticed actions" />
     <MESSAGE value="Made changes to Reply" />
     <MESSAGE value="Added reply to commands." />
@@ -359,7 +366,8 @@
     <MESSAGE value="Rewritten profile list and fixed IDEA yellow problems." />
     <MESSAGE value="Fixed the typo in messages." />
     <MESSAGE value="Refactored the loggers." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored the loggers." />
+    <MESSAGE value="Configured application.properties." />
+    <option name="LAST_COMMIT_MESSAGE" value="Configured application.properties." />
   </component>
   <component name="WindowStateProjectService">
     <state x="408" y="268" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1614767114928">
@@ -386,22 +394,22 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="100" y="125" width="1240" height="675" key="DiffContextDialog/0.25.1440.875@0.25.1440.875" timestamp="1614773581748" />
-    <state width="1398" height="218" key="GridCell.Tab.0.bottom" timestamp="1615534459269">
+    <state width="1398" height="218" key="GridCell.Tab.0.bottom" timestamp="1615535102178">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="218" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1615534459269" />
-    <state width="1398" height="218" key="GridCell.Tab.0.center" timestamp="1615534459268">
+    <state width="1398" height="218" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1615535102178" />
+    <state width="1398" height="218" key="GridCell.Tab.0.center" timestamp="1615535102178">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="218" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1615534459268" />
-    <state width="1398" height="218" key="GridCell.Tab.0.left" timestamp="1615534459267">
+    <state width="1398" height="218" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1615535102178" />
+    <state width="1398" height="218" key="GridCell.Tab.0.left" timestamp="1615535102177">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="218" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1615534459267" />
-    <state width="1398" height="218" key="GridCell.Tab.0.right" timestamp="1615534459268">
+    <state width="1398" height="218" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1615535102177" />
+    <state width="1398" height="218" key="GridCell.Tab.0.right" timestamp="1615535102178">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="218" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1615534459268" />
+    <state width="1398" height="218" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1615535102178" />
     <state x="349" y="169" key="RollbackChangesDialog" timestamp="1615443919119">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
@@ -410,10 +418,10 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="208" y="41" key="SettingsEditor/0.25.1440.875@0.25.1440.875" timestamp="1614669363465" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1615443325667">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1615534971667">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/0.25.1440.875@0.25.1440.875" timestamp="1615443325667" />
+    <state width="500" height="445" key="SwitcherDM/0.25.1440.875@0.25.1440.875" timestamp="1615534971667" />
     <state x="523" y="380" key="VCS.ChangelistChooser" timestamp="1614850602318">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
