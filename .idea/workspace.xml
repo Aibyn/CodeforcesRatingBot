@@ -28,10 +28,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac550242-d465-4dc7-8e6b-acf56ceca4dc" name="Default Changelist" comment="Changed database from h2 to postgresql.">
+    <list default="true" id="ac550242-d465-4dc7-8e6b-acf56ceca4dc" name="Default Changelist" comment="Fixed database postgresql.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/repository/UserSpringDataRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/repository/UserSpringDataRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -358,7 +356,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615902424316</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Fixed database postgresql.">
+      <created>1615917966674</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1615917966674</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -386,7 +391,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added InfoService to retrieve user rating from api." />
     <MESSAGE value="Updated retrive rating change method." />
     <MESSAGE value="Added errors for the rating change function." />
     <MESSAGE value="Added error for too many tries" />
@@ -411,7 +415,8 @@
     <MESSAGE value="Added system properties." />
     <MESSAGE value="Moving system properties." />
     <MESSAGE value="Changed database from h2 to postgresql." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed database from h2 to postgresql." />
+    <MESSAGE value="Fixed database postgresql." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed database postgresql." />
   </component>
   <component name="WindowStateProjectService">
     <state x="208" y="41" key="#Project_Structure" timestamp="1615535711128">
@@ -446,22 +451,22 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="530" y="369" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog/0.25.1440.875@0.25.1440.875" timestamp="1615902439909" />
-    <state width="1398" height="218" key="GridCell.Tab.0.bottom" timestamp="1615917325714">
+    <state width="1398" height="218" key="GridCell.Tab.0.bottom" timestamp="1615918022526">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="218" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1615917325714" />
-    <state width="1398" height="218" key="GridCell.Tab.0.center" timestamp="1615917325713">
+    <state width="1398" height="218" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1615918022526" />
+    <state width="1398" height="218" key="GridCell.Tab.0.center" timestamp="1615918022525">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="218" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1615917325713" />
-    <state width="1398" height="218" key="GridCell.Tab.0.left" timestamp="1615917325713">
+    <state width="1398" height="218" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1615918022525" />
+    <state width="1398" height="218" key="GridCell.Tab.0.left" timestamp="1615918022525">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="218" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1615917325713" />
-    <state width="1398" height="218" key="GridCell.Tab.0.right" timestamp="1615917325714">
+    <state width="1398" height="218" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1615918022525" />
+    <state width="1398" height="218" key="GridCell.Tab.0.right" timestamp="1615918022526">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="218" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1615917325714" />
+    <state width="1398" height="218" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1615918022526" />
     <state x="349" y="169" key="RollbackChangesDialog" timestamp="1615443919119">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
@@ -478,10 +483,10 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="523" y="380" key="VCS.ChangelistChooser/0.25.1440.875@0.25.1440.875" timestamp="1614850602318" />
-    <state x="320" y="199" key="Vcs.Push.Dialog.v2" timestamp="1615902443373">
+    <state x="320" y="199" key="Vcs.Push.Dialog.v2" timestamp="1615918037740">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="320" y="199" key="Vcs.Push.Dialog.v2/0.25.1440.875@0.25.1440.875" timestamp="1615902443373" />
+    <state x="320" y="199" key="Vcs.Push.Dialog.v2/0.25.1440.875@0.25.1440.875" timestamp="1615918037740" />
     <state x="511" y="244" key="chooseDestDirectoryDialog" timestamp="1615373149942">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
