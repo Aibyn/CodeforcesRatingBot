@@ -13,11 +13,6 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select>
       <path>
@@ -28,9 +23,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac550242-d465-4dc7-8e6b-acf56ceca4dc" name="Default Changelist" comment="Fixed database postgresql.">
+    <list default="true" id="ac550242-d465-4dc7-8e6b-acf56ceca4dc" name="Default Changelist" comment="Fixed postgresql configuration.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/service/ScheduledRatingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot/service/ScheduledRatingService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,12 +54,6 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="CodeforcesRatingBot" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="CodeforcesRatingBot" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -110,7 +99,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/telegrambot/codeforcesRatingbot" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
@@ -122,14 +112,10 @@
       <recent name="com.telegrambot.codeforcesRatingbot.Handler" />
       <recent name="com.telegrambot.codeforcesRatingbot" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="gradle build" />
-      <command value="gradle build -x check" />
     </option>
   </component>
   <component name="RunManager" selected="Application.CodeforcesRatingBotApplication">
@@ -314,56 +300,7 @@
       <option name="project" value="LOCAL" />
       <updated>1615534201634</updated>
     </task>
-    <task id="LOCAL-00020" summary="Refactored the loggers.">
-      <created>1615534454339</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1615534454339</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Configured application.properties.">
-      <created>1615534664259</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1615534664259</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Added Ping services for Heroku.">
-      <created>1615535156560</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1615535156560</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Added system properties.">
-      <created>1615535953699</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1615535953699</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Moving system properties.">
-      <created>1615536333021</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1615536333021</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Changed database from h2 to postgresql.">
-      <created>1615902424316</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1615902424316</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Fixed database postgresql.">
-      <created>1615917966674</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1615917966674</updated>
-    </task>
-    <option name="localTasksCounter" value="27" />
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -391,6 +328,13 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added two commands for adding and deleting profile." />
+    <MESSAGE value="Added add_profile reply and delete_profile reply also start meny reply" />
+    <MESSAGE value="Added default reply for unnoticed actions" />
+    <MESSAGE value="Made changes to Reply" />
+    <MESSAGE value="Added reply to commands." />
+    <MESSAGE value="Added working repository" />
+    <MESSAGE value="Added InfoService to retrieve user rating from api." />
     <MESSAGE value="Updated retrive rating change method." />
     <MESSAGE value="Added errors for the rating change function." />
     <MESSAGE value="Added error for too many tries" />
@@ -409,20 +353,9 @@
     <MESSAGE value="Rewritten profile list to look better." />
     <MESSAGE value="Rewritten profile list and fixed IDEA yellow problems." />
     <MESSAGE value="Fixed the typo in messages." />
-    <MESSAGE value="Refactored the loggers." />
-    <MESSAGE value="Configured application.properties." />
-    <MESSAGE value="Added Ping services for Heroku." />
-    <MESSAGE value="Added system properties." />
-    <MESSAGE value="Moving system properties." />
-    <MESSAGE value="Changed database from h2 to postgresql." />
-    <MESSAGE value="Fixed database postgresql." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed database postgresql." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the typo in messages." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="208" y="41" key="#Project_Structure" timestamp="1615535711128">
-      <screen x="0" y="25" width="1440" height="875" />
-    </state>
-    <state x="208" y="41" key="#Project_Structure/0.25.1440.875@0.25.1440.875" timestamp="1615535711128" />
     <state x="408" y="268" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1614767114928">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
@@ -447,26 +380,26 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="100" y="125" width="1240" height="675" key="DiffContextDialog/0.25.1440.875@0.25.1440.875" timestamp="1614773581748" />
-    <state x="530" y="369" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog" timestamp="1615902439909">
+    <state width="1398" height="218" key="GridCell.Tab.0.bottom" timestamp="1615973763919">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="530" y="369" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog/0.25.1440.875@0.25.1440.875" timestamp="1615902439909" />
-    <state width="1398" height="218" key="GridCell.Tab.0.bottom" timestamp="1615918022526">
+    <state width="1398" height="218" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1615973763919" />
+    <state width="1398" height="218" key="GridCell.Tab.0.center" timestamp="1615973763918">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="218" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1615918022526" />
-    <state width="1398" height="218" key="GridCell.Tab.0.center" timestamp="1615918022525">
+    <state width="1398" height="218" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1615973763918" />
+    <state width="1398" height="218" key="GridCell.Tab.0.left" timestamp="1615973763917">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="218" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1615918022525" />
-    <state width="1398" height="218" key="GridCell.Tab.0.left" timestamp="1615918022525">
+    <state width="1398" height="218" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1615973763917" />
+    <state width="1398" height="218" key="GridCell.Tab.0.right" timestamp="1615973763919">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="218" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1615918022525" />
-    <state width="1398" height="218" key="GridCell.Tab.0.right" timestamp="1615918022526">
+    <state width="1398" height="218" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1615973763919" />
+    <state x="144" y="98" key="MergeDialog" timestamp="1616154163854">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="218" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1615918022526" />
+    <state x="144" y="98" key="MergeDialog/0.25.1440.875@0.25.1440.875" timestamp="1616154163854" />
     <state x="349" y="169" key="RollbackChangesDialog" timestamp="1615443919119">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
@@ -475,18 +408,18 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="208" y="41" key="SettingsEditor/0.25.1440.875@0.25.1440.875" timestamp="1614669363465" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1615534971667">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1615443325667">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/0.25.1440.875@0.25.1440.875" timestamp="1615534971667" />
+    <state width="500" height="445" key="SwitcherDM/0.25.1440.875@0.25.1440.875" timestamp="1615443325667" />
     <state x="523" y="380" key="VCS.ChangelistChooser" timestamp="1614850602318">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="523" y="380" key="VCS.ChangelistChooser/0.25.1440.875@0.25.1440.875" timestamp="1614850602318" />
-    <state x="320" y="199" key="Vcs.Push.Dialog.v2" timestamp="1615918037740">
+    <state x="320" y="199" key="Vcs.Push.Dialog.v2" timestamp="1616154297947">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="320" y="199" key="Vcs.Push.Dialog.v2/0.25.1440.875@0.25.1440.875" timestamp="1615918037740" />
+    <state x="320" y="199" key="Vcs.Push.Dialog.v2/0.25.1440.875@0.25.1440.875" timestamp="1616154297947" />
     <state x="511" y="244" key="chooseDestDirectoryDialog" timestamp="1615373149942">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
@@ -503,14 +436,18 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="458" y="204" width="525" height="516" key="extract.method.dialog/0.25.1440.875@0.25.1440.875" timestamp="1614789109493" />
+    <state x="442" y="179" key="git4idea.branch.GitSmartOperationDialog" timestamp="1616154157913">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="442" y="179" key="git4idea.branch.GitSmartOperationDialog/0.25.1440.875@0.25.1440.875" timestamp="1616154157913" />
     <state x="318" y="121" key="new project wizard" timestamp="1614851363092">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="318" y="121" key="new project wizard/0.25.1440.875@0.25.1440.875" timestamp="1614851363092" />
-    <state x="385" y="210" width="670" height="675" key="run.anything.popup" timestamp="1615535544374">
+    <state x="385" y="210" width="670" height="675" key="run.anything.popup" timestamp="1614851229373">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="385" y="210" width="670" height="675" key="run.anything.popup/0.25.1440.875@0.25.1440.875" timestamp="1615535544374" />
+    <state x="385" y="210" width="670" height="675" key="run.anything.popup/0.25.1440.875@0.25.1440.875" timestamp="1614851229373" />
     <state x="385" y="214" width="670" height="676" key="search.everywhere.popup" timestamp="1615455474315">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
