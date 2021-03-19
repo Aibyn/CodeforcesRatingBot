@@ -56,6 +56,8 @@ public class ScheduledRatingService {
             String sign = (ratingDiff >= 0 ? "+" : "");
             String contestTitle = ratingChange.getContestName();
 
+            subscription.setLastContest(contestId);
+
             telegramBot.executeSendMessage(messageService.sendMessage(chatId,
                     "reply.scheduled.subscription.ratingChange",
                     Emojis.NEW, (sign.equals("+") ? Emojis.UPWARD_TREND : Emojis.DOWNWARD_TREND), profile, sign, ratingDiff, contestTitle, contestId));
