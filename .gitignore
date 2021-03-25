@@ -64,3 +64,4 @@ gradle-app.setting
 # End of https://www.toptal.com/developers/gitignore/api/gradle,java,git
 /src/main/resources/application-local.properties
 .idea
+
